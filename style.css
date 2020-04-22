@@ -1,0 +1,133 @@
+* { box-sizing: border-box; }
+
+body { 
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+} 
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(142deg, rgba(2,0,36,1) 6%, rgba(1,122,115,1) 50%, rgba(0,255,200,1) 100%); ;
+}
+
+
+.form-wrapper{
+    background-color: #fff;
+    max-width: 500px;
+    width: 90%;
+    overflow: hidden;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form{
+    padding: 30px;
+}
+
+
+.form-heading{
+    margin: 0;
+    color: rgb(2,0,36);
+    padding: 20px;
+    background-color: #e6e6e8;
+}
+
+.form-control{
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: rgb(2,0,36);
+
+}
+
+.form-control input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #e6e6e8;
+    outline: none;
+}
+
+.form-control input:focus{
+    border-color: rgb(2,0,36);
+}
+
+
+.form-control i {
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.error-msg{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 2px;
+}
+
+.btn-submit{
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgb(2,0,36);
+    background-image: linear-gradient(142deg,rgba(0,255,200,1) 6% , rgba(1,122,115,1) 50%, rgba(2,0,36,1) 100%);
+    display: block;
+
+}
+
+
+.btn-submit:hover::before {
+    opacity: 1;
+  }
+  
+
+input:focus > i {
+    visibility: visible;
+}
+
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+.form-control.error .error-msg{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+.form-control.success input{
+    border-color: #2ecc71;
+}
+/* .form-control.success .error-msg{
+    color: #2ecc71;
+    visibility: visible;
+} */
